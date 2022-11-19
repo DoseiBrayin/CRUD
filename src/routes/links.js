@@ -20,4 +20,12 @@ router.post('/add', async(req, res) => {
     res.redirect('/add')
 })
 
+router.get('/delete/:CEDULA', async (req, res) => {
+    const CEDULA = req.params;
+    console.log(req.params)
+    sql ="DELETE FROM empleado WHERE `empleado`.`CEDULA` = " + CEDULA.CEDULA
+    await pool.query(sql);
+    res.redirect('/');
+});
+
 module.exports = router

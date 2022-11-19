@@ -9,7 +9,6 @@ router.get('/', async (req, res) => {
     if(empleado.rol=='Coordinador'){
         color = 'Verde'
     }
-    console.log(empleado)
     res.render('links/table',{empleado,color})
 })
 
