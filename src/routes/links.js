@@ -17,7 +17,7 @@ router.post('/add', async(req, res) => {
         "celular":req.body.cel
     }
     await pool.query('INSERT INTO empleado set ?', [empleado]);
-    res.redirect('/add')
+    res.redirect('/')
 })
 
 router.get('/delete/:CEDULA', async (req, res) => {

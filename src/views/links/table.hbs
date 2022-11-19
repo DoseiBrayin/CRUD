@@ -12,8 +12,8 @@
         <th>Opciones</th>
     </thead>
     <tbody>
+        {{#each empleado}}
         <tr>
-            {{#each empleado}}
             <th>
 
             </th>
@@ -39,8 +39,6 @@
                 <a type="button" class="btn btn-danger btn-block p-1" href="/links/delete/{{CEDULA}}">ELIMINAR</a>
                 <button class="btn btn-warning btn-block">EDITAR</button>
             </th>
-
-            {{/each}}
-        </tr>
+        </tr>  {{/each}}
     </tbody>
 </table>
