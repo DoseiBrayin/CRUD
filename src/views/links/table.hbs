@@ -1,15 +1,46 @@
 <a type="button" class="btn btn-success btn-block p-2 m-4" href="/links/add" style="width: 150px;">
     Añadir Empleado</a>
-    <table class="table">
-        <thead class="table-dark">
-            <th>#</th>
-            <th>Nombre</th>
-            <th>Correo</th>
-            <th>Cedula</th>
-            <th>Direccion</th>
-            <th>Rol</th>
-        </thead>
-        <tbody>
+<table class="table">
+    <thead class="table-dark">
+        <th>#</th>
+        <th>Nombre</th>
+        <th>Correo</th>
+        <th>Cedula</th>
+        <th>Direccion</th>
+        <th>Rol</th>
+        <th>Celular</th>
+        <th>Opciones</th>
+    </thead>
+    <tbody>
+        <tr>
+            {{#each empleado}}
+            <th>
 
-        </tbody>
-    </table>
+            </th>
+            <th>
+                {{NOMBRE}}
+            </th>
+            <th>
+                {{CORREO}}
+            </th>
+            <th>
+                {{CEDULA}}
+            </th>
+            <th>
+                {{DIR}}
+            </th>
+            <th>
+                {{ROL}}
+            </th>
+            <th>
+                {{CELULAR}}
+            </th>
+            <th>
+                <button class="btn btn-danger btn-block p-1">ELIMINAR</button>
+                <button class="btn btn-warning btn-block">EDITAR</button>
+            </th>
+
+            {{/each}}
+        </tr>
+    </tbody>
+</table>

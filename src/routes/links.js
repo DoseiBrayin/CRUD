@@ -8,17 +8,6 @@ router.get('/add', (req, res) => {
 })
 
 router.post('/add', async(req, res) => {
-    let color = ''
-    if(req.body.rol=="Coordinador"){
-        color='red'
-    }else if(req.body.rol=="Jefe de area"){
-        color='blue'
-    }
-    else if(req.body.rol=="Impulsador"){
-        color='violet'
-    }else{
-        color='green'
-    }
     const empleado = {
         "nombre": req.body.nombre,
         "rol": req.body.rol,
@@ -28,7 +17,7 @@ router.post('/add', async(req, res) => {
         "celular":req.body.cel
     }
     await pool.query('INSERT INTO empleado set ?', [empleado]);
-    res.render('links/add')
+    res.redirect('/add')
 })
 
 module.exports = router
